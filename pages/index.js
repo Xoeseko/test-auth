@@ -1,13 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-
-import initializeBasicAuth from 'nextjs-basic-auth';
-
-const basicAuthCheck = initializeBasicAuth({
-  users: [{user: 'test', password: 'test'}]
-});
-
+import { basicAuthCheck } from '../auth/basic';
 
 export default function Home() {
   return (
