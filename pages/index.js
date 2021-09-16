@@ -69,10 +69,10 @@ export default function Home() {
   )
 }
 
-export const getServerSideProps = (ctx) => {
+export const getServerSideProps = async (ctx) => {
   const {req, res} = ctx;
 
-  basicAuthCheck(req, res);
+  await basicAuthCheck(req, res);
 
   return {
     props: {}
